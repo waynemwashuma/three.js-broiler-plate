@@ -1,0 +1,21 @@
+{
+  "name": "game-template",
+  "version": "1.0.0",
+  "description": "Wanna break form the ads?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Wayne Mwashuma",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.5.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "socket.io": "^4.5.2",
+    "three": "^0.144.0"
+  }
+}

@@ -1,0 +1,11 @@
+Model Information:
+* title:	College - Military Base
+* source:	https://sketchfab.com/3d-models/college-military-base-4d296ad86e0c481dacef2d8c566f639e
+* author:	manicvika (https://sketchfab.com/manicvika)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "College - Military Base" (https://sketchfab.com/3d-models/college-military-base-4d296ad86e0c481dacef2d8c566f639e) by manicvika (https://sketchfab.com/manicvika) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
