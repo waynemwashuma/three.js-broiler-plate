@@ -3,7 +3,7 @@ const scene = new THREE.Scene();
 const renderer = new THREE.WebGL1Renderer();
 const directionalLight = new THREE.DirectionalLight(0xfffff);
 directionalLight.castShadow = true;
-directionalLight.position.set(0,-2,10)
+directionalLight.position.set(0,10,3)
 const lighthelper = new THREE.DirectionalLightHelper(directionalLight,2,0x00ffff)
 const ambientLighting= new THREE.AmbientLight(0xffffff);
 scene.add(ambientLighting,directionalLight,lighthelper)
@@ -80,55 +80,6 @@ let mouse3D = (function () {
 var orbiter = new THREE.OrbitControls(camera, renderer.domElement);
 let terrainWidth = 20, terrainHeight = 20;
 
-class Terrain {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.material = new THREE.MeshStandardMaterial({
-            color: 0Xfff,
-            wireframe: false,
-            displacementMap:terrainHeightMap,
-            displacementScale:10
-        });
-        this.geometry = new THREE.PlaneGeometry(terrainWidth, terrainHeight, 50, 50);
-        this.self = new THREE.Mesh(this.geometry, this.material);
-        this.self.position.set(this.x + terrainWidth / 2, this.y + terrainHeight / 2)
-        Terrain.prototype.init = (scene) => {
-            scene.add(this.self);
-        }
-        this.self.castShadow= true;
-        this.self.receiveShadow = true;
-    }
-}
-class TerrainGenerator {
-    constructor(options) {
-        this.options = options || {};
-        this.terrain = [];
-        TerrainGenerator.prototype.generate = (x, y) => {
-            if (y === undefined) {
-                for (let i = 0; i < x; i++) {
-                    for (let j = 0; j < x; j++) {
-                        this.terrain.push(new Terrain(terrainWidth * i, terrainWidth * j))
-                    }
-                }
-                return
-            }
-            for (let i = 0; i < x; i++) {
-                for (let j = 0; j < y; j++) {
-                    this.terrain.push(new Terrain(terrainWidth * i, terrainWidth * j))
-                }
-            }
-        }
-        TerrainGenerator.prototype.addToscene = (scene) => {
-            for (let i = 0; i < this.terrain.length; i++) {
-                scene.add(this.terrain[i].self)
-            }
-        }
-    }
-}
-// let terra = new TerrainGenerator();
-// terra.generate(2);
-// terra.addToscene(scene)
 scene.add(axis)
 camera.position.set(1, 1, 20)
 addEventListener('resize', function (e) {
